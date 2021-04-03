@@ -4,17 +4,17 @@ Main.java
  Main
 ModelTable.java
  ModelTable
-LoginController.java
- LoginController
 RestockController.java
  RestockController
-TableController.java
- TableController
+EditController.java
+ EditController
+ManagerLoginController.java
+ ManagerLoginController
 CreateAccountController.java
  CreateAccountController
 DatabaseConnection.java
  DatabaseConnection
-EditOptionController.java
- EditOptionController
-EditController.java
- EditController
+LoginController.java
+ LoginController
+TableController.java
+ TableController

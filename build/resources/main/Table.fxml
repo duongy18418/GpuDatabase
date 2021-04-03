@@ -21,7 +21,7 @@
             <TableColumn fx:id="stockCol" prefWidth="82.4000244140625" text="Inventory" />
         </columns>
       </TableView>
-      <TextField fx:id="search" layoutX="239.0" layoutY="33.0" promptText="Search">
+      <TextField fx:id="search" layoutX="116.0" layoutY="33.0" onAction="#onSearch" promptText="Search">
          <font>
             <Font size="14.0" />
          </font>
@@ -31,7 +31,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="order" layoutX="461.0" layoutY="33.0" mnemonicParsing="false" onAction="#onOrder" text="Order History">
+      <Button fx:id="order" layoutX="481.0" layoutY="33.0" mnemonicParsing="false" onAction="#onOrder" text="Place Order">
          <font>
             <Font size="14.0" />
          </font>
@@ -41,6 +41,11 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <ChoiceBox fx:id="sort" layoutX="19.0" layoutY="36.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="category" layoutX="18.0" layoutY="35.0" prefHeight="26.0" prefWidth="92.0" />
+      <Button fx:id="refresh" layoutX="302.0" layoutY="33.0" mnemonicParsing="false" onAction="#onRefresh" text="↺">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
