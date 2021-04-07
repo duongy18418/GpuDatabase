@@ -1,3 +1,5 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -28,6 +31,9 @@ public class PurchaseController {
     @FXML
     private Button back;
 
+    public String userID;
+    Connection connect;
+
     @FXML
     void onBack(ActionEvent event) {
         try {
@@ -44,6 +50,10 @@ public class PurchaseController {
     @FXML
     void onPurchase(ActionEvent event) {
 
+    }
+
+    public void storeInfo (String userID){
+        this.userID = userID;
     }
 
 }

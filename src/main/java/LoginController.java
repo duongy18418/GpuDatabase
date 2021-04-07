@@ -30,7 +30,7 @@ public class LoginController {
     @FXML
     private Button create;
 
-    public String user, pass,  email;
+    public String userID, user, pass, email;
     Connection connect;
 
     @FXML
@@ -62,17 +62,18 @@ public class LoginController {
             ResultSet result = checkData.executeQuery(SQL);
 
             if (result.next()) {
+                userID = result.getString("customer_id");
                 user = result.getString("username");
                 pass = result.getString("password");
                 email = result.getString("email");
+                System.out.println(userID);
 
                 Stage stage = (Stage) login.getScene().getWindow();
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("Table.fxml"));
                 Parent root = loader.load();
 
                 TableController controller = loader.getController();
-                //controller.setInfo(user, pass, email);
-                //controller.displayInfo(first, last, income, bill, saving, period);
+                controller.storeInfo(userID);
 
                 Scene scene = new Scene(root);
                 stage.setScene(scene);

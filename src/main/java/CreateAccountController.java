@@ -31,6 +31,7 @@ public class CreateAccountController {
     @FXML
     private PasswordField password;
 
+    public String userID, user, pass, mail;
     Connection connect;
 
     @FXML
@@ -54,9 +55,9 @@ public class CreateAccountController {
     }
 
     private void registerUser() throws SQLException, ClassNotFoundException, IOException {
-        String user = username.getText();
-        String pass = password.getText();
-        String mail = email.getText();
+        user = username.getText();
+        pass = password.getText();
+        mail = email.getText();
         int start = 0;
 
         String query = "INSERT INTO customer(username, password, email) VALUE(?,?,?)";
@@ -68,8 +69,22 @@ public class CreateAccountController {
         insert.execute();
         insert.close();
 
+        String SQL = "SELECT * FROM customer WHERE username='" + user + "' and password='" + pass + "'";
+        Statement checkData = connect.createStatement();
+        ResultSet result = checkData.executeQuery(SQL);
+
+        if (result.next()) {
+            userID = result.getString("customer_id");
+            System.out.println(userID);
+        }
+
         Stage stage = (Stage) create.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("Table.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Table.fxml"));
+        Parent root = loader.load();
+
+        TableController controller = loader.getController();
+        controller.storeInfo(userID);
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

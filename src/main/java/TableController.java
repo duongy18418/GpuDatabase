@@ -65,6 +65,7 @@ public class TableController implements Initializable {
     @FXML
     private Button refresh;
 
+    public String userID;
     ObservableList<ModelTable> obList = FXCollections.observableArrayList();
     Connection connect;
 
@@ -98,7 +99,12 @@ public class TableController implements Initializable {
     void onOrder(ActionEvent event) {
         try {
             Stage stage = (Stage) order.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("Purchase.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Purchase.fxml"));
+            Parent root = loader.load();
+
+            PurchaseController controller = loader.getController();
+            controller.storeInfo(userID);
+
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -201,5 +207,10 @@ public class TableController implements Initializable {
 
     private void setType(ChoiceBox<String> choice) {
         choice.getItems().addAll("Model", "Manufacturer", "Ram", "Memory_Type", "Boost_Clock");
+    }
+
+    public void storeInfo (String userID){
+        this.userID = userID;
+
     }
 }
