@@ -82,7 +82,7 @@ public class EditController {
         insert.execute();
         insert.close();
 
-        Alert alert = new Alert(Alert.AlertType.ERROR);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Insert Successful");
         alert.setHeaderText("You have successfully insert new data!");
         alert.showAndWait();
@@ -115,7 +115,7 @@ public class EditController {
         result.executeUpdate();
         result.close();
 
-        Alert alert = new Alert(Alert.AlertType.ERROR);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete Successful");
         alert.setHeaderText("You have successfully delete the data!");
         alert.showAndWait();
@@ -142,7 +142,7 @@ public class EditController {
         insert.execute();
         insert.close();
 
-        Alert alert = new Alert(Alert.AlertType.ERROR);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Update Successful");
         alert.setHeaderText("You have successfully update the data!");
         alert.showAndWait();

@@ -14,9 +14,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        //DatabaseConnection connection = new DatabaseConnection();
-        //connection.DBConnect();
-
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 
         Scene scene = new Scene(root);

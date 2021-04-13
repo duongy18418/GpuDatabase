@@ -8,17 +8,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="460.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableController">
+<AnchorPane prefHeight="460.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableController">
    <children>
-      <TableView fx:id="tableView" layoutX="18.0" layoutY="85.0" prefHeight="322.0" prefWidth="618.0">
+      <TableView fx:id="tableView" layoutX="18.0" layoutY="85.0" prefHeight="322.0" prefWidth="730.0">
         <columns>
-          <TableColumn fx:id="modelCol" prefWidth="73.60000228881836" text="Model" />
-          <TableColumn fx:id="madeCol" prefWidth="104.0" text="Manufacturer" />
-            <TableColumn fx:id="ramCol" prefWidth="75.199951171875" text="RAM (GB)" />
-            <TableColumn fx:id="memCol" prefWidth="91.80001831054688" text="Memory Type" />
-            <TableColumn fx:id="boostCol" minWidth="8.79998779296875" prefWidth="128.199951171875" text="Boost Clock (MHz)" />
-            <TableColumn fx:id="priceCol" prefWidth="61.4000244140625" text="Price ($)" />
-            <TableColumn fx:id="stockCol" prefWidth="82.4000244140625" text="Inventory" />
+          <TableColumn fx:id="modelCol" prefWidth="178.40008544921875" text="Model" />
+          <TableColumn fx:id="madeCol" prefWidth="98.39990234375" text="Manufacturer" />
+            <TableColumn fx:id="ramCol" prefWidth="82.4000244140625" text="RAM (GB)" />
+            <TableColumn fx:id="memCol" prefWidth="107.20001220703125" text="Memory Type" />
+            <TableColumn fx:id="boostCol" minWidth="8.79998779296875" prefWidth="117.5999755859375" text="Boost Clock (MHz)" />
+            <TableColumn fx:id="priceCol" prefWidth="64.7999267578125" text="Price ($)" />
+            <TableColumn fx:id="stockCol" prefWidth="86.39996337890625" text="Inventory" />
         </columns>
       </TableView>
       <TextField fx:id="search" layoutX="116.0" layoutY="33.0" onAction="#onSearch" promptText="Search">
@@ -26,17 +26,17 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="logOut" layoutX="292.0" layoutY="421.0" mnemonicParsing="false" onAction="#onLogOut" text="Log Out">
+      <Button fx:id="logOut" layoutX="348.0" layoutY="415.0" mnemonicParsing="false" onAction="#onLogOut" text="Log Out">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="order" layoutX="481.0" layoutY="33.0" mnemonicParsing="false" onAction="#onOrder" text="Place Order">
+      <Button fx:id="order" layoutX="585.0" layoutY="33.0" mnemonicParsing="false" onAction="#onOrder" text="Place Order">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="edit" layoutX="591.0" layoutY="33.0" mnemonicParsing="false" onAction="#onEdit" text="Edit">
+      <Button fx:id="edit" layoutX="702.0" layoutY="33.0" mnemonicParsing="false" onAction="#onEdit" text="Edit">
          <font>
             <Font size="14.0" />
          </font>
