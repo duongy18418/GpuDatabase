@@ -1,20 +1,20 @@
 DatabaseConnection.java
  DatabaseConnection
-Main.java
- Main
+CreateAccountController.java
+ CreateAccountController
 ModelTable.java
  ModelTable
-PurchaseController.java
- PurchaseController
+Main.java
+ Main
 LoginController.java
  LoginController
+ManagerLoginController.java
+ ManagerLoginController
+PurchaseController.java
+ PurchaseController
 RestockController.java
  RestockController
 TableController.java
  TableController
-CreateAccountController.java
- CreateAccountController
-ManagerLoginController.java
- ManagerLoginController
 EditController.java
  EditController

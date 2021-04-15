@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="289.0" prefWidth="296.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PurchaseController">
    <children>
@@ -29,16 +29,6 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="model" layoutX="106.0" layoutY="49.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="made" layoutX="106.0" layoutY="97.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
       <TextField fx:id="quantity" layoutX="106.0" layoutY="148.0">
          <font>
             <Font size="14.0" />
@@ -50,5 +40,7 @@
          </font>
       </Button>
       <Button fx:id="back" layoutX="122.0" layoutY="245.0" mnemonicParsing="false" onAction="#onBack" text="Return" underline="true" />
+      <ChoiceBox fx:id="made" layoutX="106.0" layoutY="97.0" prefHeight="30.0" prefWidth="175.0" />
+      <ChoiceBox fx:id="model" layoutX="106.0" layoutY="49.0" prefHeight="30.0" prefWidth="175.0" />
    </children>
 </AnchorPane>
